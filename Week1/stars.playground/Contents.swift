@@ -6,12 +6,11 @@ import Foundation
 
 let symbol = "⭐"
 
-func rep(_ s: String, _ n: Int) -> String {
-    return String(repeating: s, count: max(0, n))
-}
-
 func printLine(indent: Int, leftStars: Int, gap: Int, rightStars: Int) {
-    print(rep(" ", indent) + rep(symbol, leftStars) + rep(" ", gap) + rep(symbol, rightStars))
+    print(String(repeating: " ", count: indent) +
+          String(repeating: symbol, count: leftStars) +
+          String(repeating: " ", count: gap) +
+          String(repeating: symbol, count: rightStars))
 }
 
 func printStars() {
