@@ -5,7 +5,7 @@
 //  Created by 孙语鸿 on 9/26/25.
 //
 
-import UIKit
+import UIKit //If it creates an error, change the stimulator to iPhone
 
 func makeGrasslandImage(size: CGSize = .init(width: 1024, height: 1024)) -> UIImage {
     let renderer = UIGraphicsImageRenderer(size: size)
