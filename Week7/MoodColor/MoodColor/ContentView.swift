@@ -75,7 +75,7 @@ struct ContentView: View {
             moodName = "Calm"
             moodImage = "peace"
         default:
-            backgroundColor = .pink
+            backgroundColor = .gray
             moodName = "Neutral"
             moodImage = "neutral"
         }
