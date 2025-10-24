@@ -11,7 +11,7 @@ import UIKit
 struct ContentView: View {
     var body: some View {
         ZStack {
-            gameViewControllerContainer() // 承载 SpriteKit 场景
+            gameViewControllerContainer() 
                 .ignoresSafeArea()
         }
     }
