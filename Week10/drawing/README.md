@@ -1,0 +1,2 @@
+#This project is a real-time gesture drawing application. Using the iPhone’s front camera to capture the user’s hand posture, the system employs **VNDetectHumanHandPoseRequest** to detect the coordinates of the index fingertip, enabling mid-air drawing interactions. Users can select brush color and thickness, clear the canvas with one tap, and monitor the recognition frame rate and confidence level in real time.
+
