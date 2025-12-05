@@ -114,10 +114,7 @@ final class MelodyEngine: ObservableObject {
     private let format = AVAudioFormat(standardFormatWithSampleRate: 44100, channels: 1)!
     private var timer: Timer?
 
-    // 当前情绪
     var emotion: EmotionLabel = .calm { didSet { restart() } }
-
-    // 随机生成的 phrase（保证每次播放旋律都不一样）
     private var phrase: [Int] = []
     private var phraseIndex: Int = 0
 
@@ -151,9 +148,6 @@ final class MelodyEngine: ObservableObject {
 
     private func buildPhrase() {
         guard let dyn = DYNAMICS[emotion] else { return }
-
-        // 从对应情绪的 notePool 里随机挑 8 个音，
-        // 再随机加一个八度偏移，让每次的旋律都不一样
         phrase = (0..<8).map { _ in
             let base = dyn.notePool.randomElement() ?? 60
             let octaveShift = [-12, 0, 12].randomElement() ?? 0
